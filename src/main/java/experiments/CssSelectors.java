@@ -34,11 +34,16 @@ public class CssSelectors {
         btnImpressive.click();
         pause(5);
 
-        WebElement btnButtons = driver.findElement(By.id("item-4"));
+        //WebElement btnButtons = driver.findElement(By.id("item-4"));
+        WebElement btnButtons = driver.findElement(By.cssSelector("li:nth-"));
         btnButtons.click();
         //WebElement btnDoubleClick = driver.findElement(By.id("doubleClickBtn"));
         WebElement btnDoubleClick = driver.findElement(By.cssSelector("#doubleClickBtn"));
         btnDoubleClick.click();
+        pause(5);
+
+        driver.navigate().back();
+        driver.navigate().back();
         pause(5);
 
         //driver.close();
