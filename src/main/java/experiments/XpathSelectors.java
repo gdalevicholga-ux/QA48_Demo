@@ -49,6 +49,14 @@ public class XpathSelectors {
         inputEmail.sendKeys("monkey@gmail.com");
         WebElement textareaCurAdd = driver.findElement(By.id("currentAddress"));
         textareaCurAdd.sendKeys("Monkey Street 1");
+        WebElement textareaPerAdd = driver.findElement(By.id("permanentAddress"));
+        textareaPerAdd.sendKeys("Monkey avenue 5");
+        WebElement btnSubmit = driver.findElement(By.xpath("//button[text()='Submit']"));
+        btnSubmit.click();
+        pause(7);
+        WebElement output = driver.findElement(By.xpath("//div[@id='output']"));
+        System.out.println(output.getText());
+        driver.quit();
     }
 
     public void pause(int time){
