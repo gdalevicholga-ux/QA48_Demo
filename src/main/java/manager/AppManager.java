@@ -14,9 +14,9 @@ public class AppManager {
     }
     @BeforeMethod(alwaysRun = true)
     public void setup(){
-        ChromeDriver chromeOptions = new ChromeOptions();
+        ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
     }
     @AfterMethod(alwaysRun = true)

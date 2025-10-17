@@ -3,8 +3,8 @@ name: Smoke tests
 on:
   push:
     branches: ["master"]
-  #schedule:
-    #- cron: '
+    #schedule:
+    #- cron: '   '
 
 jobs:
   test:
